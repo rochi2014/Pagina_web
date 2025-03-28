@@ -8,56 +8,59 @@
 </head>
 <body>
 
-    <!-- Contenedor superior con logo y botón -->
-    <div class="top-bar">
+    <!-- ENCABEZADO -->
+    <header class="header">
         <div class="logo-container">
             <img src="logoSara.jpg" alt="Logo Serviteca" class="logo">
-            <button class="btn btn-sesion">🔐 Iniciar Sesión</button>
+            <button class="btn-sesion">Iniciar sesión</button>
         </div>
-    </div>
-
-    <!-- Imagen de fondo -->
-    <div class="fondo"></div>
-
-    <!-- Encabezado -->
-    <header class="header">
-        <h1>🚗🔧 Serviteca Siberia SAS – ¡Cuidamos tu vehículo como si fuera nuestro! 🔧🚗</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Contenedor de servicios -->
-    <section class="contenedor">
-        <h2>Nuestros Servicios</h2>
-        <div class="servicios">
-            <div class="servicio">
-                <img class="carrusel" id="img1" src="aceite.jpg" alt="Cambio de Aceite">
-                <h3>Cambio de Aceite</h3>
-                <p>Mantenemos tu motor en óptimas condiciones.</p>
-            </div>
-            <div class="servicio">
-                <img class="carrusel" id="img2" src="montallantas.jpg" alt="Montallantas">
-                <h3>Montallantas</h3>
-                <p>Seguridad y tecnología para tus neumáticos.</p>
-            </div>
-            <div class="servicio">
-                <img class="carrusel" id="img3" src="filtros.jpg" alt="Cambio de Filtros">
-                <h3>Cambio de Filtros</h3>
-                <p>Mejora el rendimiento y eficiencia del vehículo.</p>
-            </div>
-            <div class="servicio">
-                <img class="carrusel" id="img4" src="lavado.jpg" alt="Lavado de Autos">
-                <h3>Lavado Profesional</h3>
-                <p>Deja tu vehículo impecable por dentro y por fuera.</p>
-            </div>
+    <!-- PRESENTACIÓN -->
+    <section class="hero">
+        <h1 class="titulo">Serviteca Siberia SAS</h1>
+        <p class="subtitulo">¡Cuidamos tu vehículo como si fuera nuestro!</p>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section class="servicios">
+        <div class="servicio">
+            <img src="aceite.jpg" alt="Cambio de Aceite">
+            <h3>Cambio de Aceite</h3>
+            <p>Mantenemos tu motor en óptimas condiciones.</p>
+        </div>
+        <div class="servicio">
+            <img src="montallantas.jpg" alt="Montallantas">
+            <h3>Montallantas</h3>
+            <p>La mejor tecnología para tu seguridad en la vía.</p>
+        </div>
+        <div class="servicio">
+            <img src="filtros.jpg" alt="Cambio de Filtros">
+            <h3>Cambio de Filtros</h3>
+            <p>Mejor rendimiento y eficiencia para tu carro.</p>
+        </div>
+        <div class="servicio">
+            <img src="lavado.jpg" alt="Lavado Profesional">
+            <h3>Lavado Profesional</h3>
+            <p>Dejamos tu vehículo impecable, por dentro y por fuera.</p>
         </div>
     </section>
 
-    <!-- Botones de contacto y ubicación -->
-    <div class="botones">
-        <a href="https://maps.app.goo.gl/h9F7vrapThNeoRKCA" target="_blank" class="btn btn-ubicacion">📍 Ubicación</a>
-        <a href="https://wa.me/573214493901" target="_blank" class="btn btn-contacto">📞 Contáctanos</a>
-    </div>
+    <!-- BOTONES DE UBICACIÓN Y CONTACTO -->
+    <section class="botones">
+        <a href="https://maps.google.com" target="_blank" class="btn">Ubicación 📍</a>
+        <a href="tel:+573001234567" class="btn">Contáctanos 📞</a>
+    </section>
 
-    <!-- Pie de página -->
+    <!-- PIE DE PÁGINA -->
     <footer class="footer">
         <p>&copy; 2025 Serviteca Siberia SAS. Todos los derechos reservados.</p>
     </footer>
