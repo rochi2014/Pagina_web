@@ -1,10 +1,12 @@
 /* Definir colores fijos */
+/* Definir colores fijos */
 :root {
-    --color-principal: #009688;  /* Verde principal */
+    --color-principal: #0058BC;  /* Verde principal */
     --color-secundario: #FF5722; /* Naranja de contraste */
-    --color-fondo: #F5F5F5; /* Fondo claro */
+    --color-fondo: #EDFFEB; /* Fondo claro */
     --color-texto: #212121; /* Texto oscuro */
-    --color-botones: #00796B; /* Verde más oscuro */
+    --color-botones: #044662; /* Verde más oscuro */
+}
 }
 
 /* Evita que el navegador altere los colores en móvil o modo oscuro */
