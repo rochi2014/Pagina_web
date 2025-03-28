@@ -1,167 +1,133 @@
+/* Definir colores fijos */
+:root {
+    --color-principal: #009688;  /* Verde principal */
+    --color-secundario: #FF5722; /* Naranja de contraste */
+    --color-fondo: #F5F5F5; /* Fondo claro */
+    --color-texto: #212121; /* Texto oscuro */
+    --color-botones: #00796B; /* Verde más oscuro */
+}
+
+/* Evita que el navegador altere los colores en móvil o modo oscuro */
+* {
+    color-scheme: only light !important; /* Forzar modo claro */
+}
+
 /* Estilos generales */
 body {
+    background-color: var(--color-fondo) !important;
+    color: var(--color-texto) !important;
     font-family: Arial, sans-serif;
-    background-color: #F2D7C7;
-    color: #044662;
     margin: 0;
     padding: 0;
+}
+
+/* Encabezado */
+.header {
+    background-color: var(--color-principal) !important;
+    color: white !important;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
 }
 
-/* Contenedor superior con logo y botón */
-.top-bar {
+/* Menú de navegación */
+.nav ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 1vh 3vw;
-    background-color: rgba(0, 88, 188, 0.9);
+    gap: 20px;
 }
 
-/* Contenedor del logo y botón */
+.nav ul li a {
+    text-decoration: none;
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Logo e Inicio de Sesión */
 .logo-container {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Logo más pequeño */
-.logo {
-    width: 10vw;
-    max-width: 100px;
+.logo-container img {
+    width: 50px;
     height: auto;
 }
 
 /* Botón de inicio de sesión */
 .btn-sesion {
-    background-color: #009688;
-    color: #FFFFFF;
-    font-size: 1vw;
-    padding: 1vh 2vw;
+    background-color: var(--color-botones) !important;
+    color: white !important;
+    font-size: 14px;
+    padding: 5px 15px;
     border: none;
     cursor: pointer;
     border-radius: 8px;
     font-weight: bold;
 }
 
-/* Imagen de fondo */
-.fondo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('parcelas.jpg') no-repeat center center/cover;
-    z-index: -1;
-}
-
-/* Encabezado */
-.header {
-    background-color: rgba(0, 88, 188, 0.8);
-    color: #FFFFFF;
+/* Contenido */
+.header-content {
     text-align: center;
-    padding: 5vh;
-    width: 100%;
+    padding: 40px;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 2.5vw;
-}
-
-/* Contenedor de servicios */
-.contenedor {
-    text-align: center;
-    padding: 5vh 5vw;
-    background: rgba(237, 255, 235, 0.9);
-    border-radius: 10px;
-    width: 90%;
-}
-
-/* Sección de servicios */
+/* Sección de imágenes y servicios */
 .servicios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3vw;
-    justify-content: center;
-}
-
-/* Servicios individuales */
-.servicio {
-    background-color: #EDFFEB;
-    border: 3px solid #044662;
-    padding: 3vh;
-    border-radius: 15px;
-    text-align: center;
-}
-
-/* Imágenes con mismo tamaño */
-.servicio img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-/* Botones */
-.botones {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin: 30px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 2vh 4vw;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5vw;
-    border-radius: 10px;
-}
-
-.btn-ubicacion {
-    background-color: #009688;
-    color: #FFFFFF;
-}
-
-.btn-contacto {
-    background-color: #FF5722;
-    color: #FFFFFF;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .header h1 {
-        font-size: 5vw;
-    }
-
-    .servicio img {
-        height: 200px;
-    }
-
-    .btn {
-        font-size: 2.5vw;
-        padding: 3vh 5vw;
-    }
-
-    .btn-sesion {
-        font-size: 2.5vw;
-        padding: 2vh 4vw;
-    }
-
-    .logo {
-        width: 15vw;
-    }
-}
-
-/* Footer */
-.footer {
-    background-color: #044662;
-    color: #FFFFFF;
+.servicio {
+    width: 300px;
     text-align: center;
-    padding: 2vh;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.servicio img {
     width: 100%;
-    font-size: 1.5vw;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Pie de página */
+.footer {
+    background-color: var(--color-principal) !important;
+    color: white !important;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Evitar cambios por modo oscuro */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--color-fondo) !important;
+        color: var(--color-texto) !important;
+    }
+    
+    .header, .nav, .footer {
+        background-color: var(--color-principal) !important;
+        color: white !important;
+    }
 }
